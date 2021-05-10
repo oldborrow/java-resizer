@@ -33,12 +33,12 @@ class ResizerAppTest {
     @Test
     public void testReducingCover() throws Exception {
         final Integer reducedPreviewWidth = FILM_COVER_WIDTH - 500;
-        final Integer reducedPreviewHeight = FILM_COVER_HEIGHT - 500;
+        final Integer reducedPreviewHeight = FILM_COVER_HEIGHT - 500; // ????? was 1000 but actually it is 737
 
         URL res = getClass().getClassLoader().getResource(FILM_COVER_SOURCE_NAME);
         assert res != null;
 
-        File file = Paths.get(res.toURI()).toFile();
+        File file = Paths .get(res.toURI()).toFile();
         String absolutePathInput = file.getAbsolutePath();
 
         String absolutePathOutput = absolutePathInput.replaceFirst(FILM_COVER_SOURCE_NAME, FILM_COVER_TARGET_NAME);
@@ -52,7 +52,6 @@ class ResizerAppTest {
         app.call();
 
         BufferedImage reducedPreview = ImageIO.read(new File(absolutePathOutput));
-
         assertEquals(reducedPreview.getWidth(), reducedPreviewWidth);
         assertEquals(reducedPreview.getHeight(), reducedPreviewHeight);
     }
