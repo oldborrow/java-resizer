@@ -33,7 +33,7 @@ class ResizerAppTest {
     @Test
     public void testReducingCover() throws Exception {
         final Integer reducedPreviewWidth = FILM_COVER_WIDTH - 500;
-        final Integer reducedPreviewHeight = FILM_COVER_HEIGHT - 500; // ????? was 1000 but actually it is 737
+        final Integer reducedPreviewHeight = FILM_COVER_HEIGHT - 500;
 
         URL res = getClass().getClassLoader().getResource(FILM_COVER_SOURCE_NAME);
         assert res != null;
@@ -164,6 +164,7 @@ class ResizerAppTest {
 //        String outputCheckSum = getMD5(absolutePathOutput);
 //        assertEquals("d4e92cf8ce5c1ed04241129da3d950f1", outputCheckSum);
 //    }
+
 
     @Test
     public void testTypoSourceName() throws Exception {
