@@ -50,3 +50,5 @@ Options Settings:
 
 ## Полная версия технического задания
 Ты сможешь её найти [по ссылке](https://www.notion.so/edtech17/public-4a6da22b5a36489c99b9b986a4c9d7cb).
+
+Change
